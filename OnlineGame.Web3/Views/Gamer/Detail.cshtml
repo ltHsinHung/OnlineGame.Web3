@@ -1,0 +1,14 @@
+﻿@using OnlineGame.Web3.Models;
+@model  Gamer
+@{
+    ViewBag.Title = "Gamers Details";
+}
+
+<h2>@ViewBag.Title.ToString()</h2>
+    <ul>
+        <li>Id: @Model.Id</li>
+        <li>Name: @Model.Name</li>
+        <li>Gamer Id: @Model.Id</li>
+        <li>Team Id: @Model.TeamId</li>
+    </ul>
+@Html.ActionLink("Back to Gamers List", "Index", "Gamer", new { teamId = Model.TeamId }, null);
